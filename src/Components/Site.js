@@ -9,7 +9,7 @@ class Site extends Component {
         return (
             <>
                 <Header role={this.props.role} />
-                <div id="content" className={this.props.role}>
+                <div id="body" className={`${this.props.role} ui container`}>
                     <RouteList role={this.props.role} />
                 </div>
                 <Footer role={this.props.role} />

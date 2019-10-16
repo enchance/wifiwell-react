@@ -3,7 +3,7 @@
 export const initAuth = {
     is_authenticated: false,
     is_active: false,
-    role: 'guest'
+    role: 'guest-role'
 }
 
 export const initAccount = {

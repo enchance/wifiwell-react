@@ -15,7 +15,7 @@ import LogoutFailedNotice from "../Views/auth/notices/logout-failed";
 const notice_route_group = []
 
 const auth_route_group = [
-    {path: '/login', component: LoginPage},
+    {path: '/signin', component: LoginPage},
     {path: '/logout', component: LogoutPage},
     {path: '/register', component: RegisterPage},
     {path: '/n/logout-failed', component: LogoutFailedNotice}
@@ -77,13 +77,13 @@ const AdminRoutes = () => (
 )
 
 const RouteList = ({role}) => {
-    if(role === 'guest') {
+    if(role === 'guest-role') {
         return <GuestRoutes />
     }
-    else if(role === 'account') {
+    else if(role === 'account-role') {
         return <AccountRoutes />
     }
-    else if(role === 'admin') {
+    else if(role === 'admin-role') {
         return <AdminRoutes />
     }
 }

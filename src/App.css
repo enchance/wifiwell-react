@@ -1,0 +1,7 @@
+#header {background:#FFF; height:60px; box-shadow:0 0 5px #00000040;}
+#body {padding:50px 0 100px;}
+
+#navbar a {border-radius:0; height:60px; margin:0;}
+#navbar a.active {background:#555; color:#FFF;}
+
+#footer {background:#555; padding:30px 0; color:#CCC;}
