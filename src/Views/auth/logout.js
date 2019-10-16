@@ -6,4 +6,4 @@ const LogoutPage = props => {
     )
 }
 
-export default LogoutView;
+export default LogoutPage;

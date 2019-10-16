@@ -1,9 +1,9 @@
 import React from 'react'
 
-const HomeView = props => {
+const HomePage = props => {
     return (
         <p>This is the Home view.</p>
     )
 }
 
-export default HomeView;
+export default HomePage;

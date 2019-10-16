@@ -6,4 +6,4 @@ const ContactPage = props => {
     )
 }
 
-export default ContactView;
+export default ContactPage;

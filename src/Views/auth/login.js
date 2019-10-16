@@ -6,4 +6,4 @@ const LoginPage = props => {
     )
 }
 
-export default LoginView;
+export default LoginPage;

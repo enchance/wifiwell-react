@@ -6,4 +6,4 @@ const FeaturesPage = props => {
     )
 }
 
-export default FeaturesView;
+export default FeaturesPage;

@@ -6,4 +6,4 @@ const RegisterPage = props => {
     )
 }
 
-export default RegisterView;
+export default RegisterPage;

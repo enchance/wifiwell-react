@@ -1,8 +1,16 @@
 import React from 'react'
 
+export const Navbar = props => {
+    return (
+        <nav>
+            <p>Links will go here.</p>
+        </nav>
+    );
+};
+
 export const Header = props => {
     return (
-        <p>This is the Header func.</p>
+        <Navbar />
     );
 };
 
@@ -12,10 +20,3 @@ export const Footer = props => {
     );
 };
 
-export const Navbar = props => {
-    return (
-        <nav>
-            <p>This is the Navbar func.</p>
-        </nav>
-    );
-};
