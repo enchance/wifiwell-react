@@ -8,11 +8,11 @@ class Site extends Component {
     render() {
         return (
             <>
-                <Header />
+                <Header role={this.props.role} />
                 <div id="content" className={this.props.role}>
                     <RouteList role={this.props.role} />
                 </div>
-                <Footer />
+                <Footer role={this.props.role} />
             </>
         );
     }

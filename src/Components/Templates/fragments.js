@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Navbar = props => {
     return (
-        <nav>
+        <nav id={'navbar'} className={props.role}>
             <p>Links will go here.</p>
         </nav>
     );
@@ -10,13 +10,17 @@ export const Navbar = props => {
 
 export const Header = props => {
     return (
-        <Navbar />
+        <header id="header" className={props.role}>
+            <Navbar role={props.role} />
+        </header>
     );
 };
 
 export const Footer = props => {
     return (
-        <p>This is the Footer func.</p>
+        <footer id="footer" className={props.role}>
+            <p>This is the Footer func.</p>
+        </footer>
     );
 };
 
