@@ -10,8 +10,8 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 
 const client = new ApolloClient({
-    uri: 'https://cors-anywhere.herokuapp.com/https://anilist.co/graphiql',
-})
+    uri: 'https://countries.trevorblades.com/',
+});
 
 function App() {
     return (

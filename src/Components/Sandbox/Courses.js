@@ -1,37 +1,41 @@
 import React from 'react'
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
+import { gql } from 'apollo-boost'
+// import gql from 'graphql-tag'
 
 
-const Courses = () => (
-    <Query query={gql`
+const Courses = () => {
+    const query = gql`
         {
-            Page {
-                characters {
-                    id
-                    name {
-                        full
-                        native
-                    }
-                    image {
-                        large
-                    }
+            country(code: "BR") {
+                name
+                native
+                emoji
+                currency
+                languages {
+                    code
+                    name
                 }
             }
         }
-    `}>
-        {({loading, error, data}) => {
-            if(loading) return <h1>Loading the thing...</h1>
-            if(error) {
-                console.log(error)
-                return <h1>Error!</h1>
-            }
-            console.log(data)
-            // return data.Page.characters.map((item, idx) => (
-            //     <p key={item.id}>{`${item.name.full} (#${item.id}) - ${item.name.native}`}</p>
-            // ))
-        }}
-    </Query>
-)
+    `;
+    return (
+        <Query query={query}>
+            {({loading, error, data}) => {
+                if(loading) return <h1>Loading the thing...</h1>
+                if(error) {
+                    console.log(error)
+                    return <h1>Error!</h1>
+                }
+                console.log(data)
+                const {name, currency, native} = data.country;
+                return <p>{`${name} (${currency}) - ${native}`}</p>
+                // return data.country.map((item, idx) => (
+                //     <p key={idx}>{`${item.name} (#${item.currency}) - ${item.native}`}</p>
+                // ))
+            }}
+        </Query>
+    )
+}
 
 export default Courses
