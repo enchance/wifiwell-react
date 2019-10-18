@@ -6,15 +6,24 @@ import Site from "./Components/Site";
 import 'semantic-ui-css/semantic.min.css'
 import './App.css';
 
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
+
+const client = new ApolloClient({
+    uri: 'https://cors-anywhere.herokuapp.com/https://anilist.co/graphiql',
+})
+
 function App() {
     return (
-        <Provider store={store}>
-            <div className="App">
-                <BrowserRouter>
-                    <Site />
-                </BrowserRouter>
-            </div>
-        </Provider>
+        <ApolloProvider client={client}>
+            <Provider store={store}>
+                <div className="App">
+                    <BrowserRouter>
+                        <Site />
+                    </BrowserRouter>
+                </div>
+            </Provider>
+        </ApolloProvider>
     );
 }
 
